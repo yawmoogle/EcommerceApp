@@ -1,6 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRegisterCentral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRegisterLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <TextView
+        android:id="@+id/appRegister"
+        style="@style/h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/RegisterText"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/guidelineRegisterCentral"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineRegisterTop" />
+
+    <EditText
+        android:id="@+id/edUserRegister"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edittextHeight"
+        app:layout_constraintStart_toStartOf="@id/guidelineRegisterLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineRegisterRight"
+        app:layout_constraintTop_toBottomOf="@id/appRegister"
+        android:hint="Username"
+        android:layout_marginTop="50dp"/>
+
+    <EditText
+        android:id="@+id/edPasswordRegister"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edittextHeight"
+        app:layout_constraintStart_toStartOf="@id/guidelineRegisterLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineRegisterRight"
+        app:layout_constraintTop_toBottomOf="@id/edUserRegister"
+        android:hint="Password"
+        android:layout_marginTop="50dp"/>
+
+    <EditText
+        android:id="@+id/edEmailRegister"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edittextHeight"
+        app:layout_constraintStart_toStartOf="@id/guidelineRegisterLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineRegisterRight"
+        app:layout_constraintTop_toBottomOf="@id/edPasswordRegister"
+        android:hint="Email"
+        android:layout_marginTop="50dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/RegisterRegisterButton"
+        style="@style/blueButtonStyle"
+        android:layout_width="@dimen/smallButtonWidth"
+        android:layout_height="@dimen/smallButtonHeight"
+        android:text="Register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/guidelineRegisterCentral"
+        app:layout_constraintTop_toBottomOf="@id/edEmailRegister" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/RegisterRegisterButton"
+        app:layout_constraintLeft_toRightOf="@id/guidelineRegisterCentral"
+        android:text="@string/LoginClue"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRegisterTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRegisterRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
 </androidx.constraintlayout.widget.ConstraintLayout>

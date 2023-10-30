@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">ShopEase Pro</string>
     <string name="titleText">The One Stop Shop\nFor All Your Needs</string>
+    <string name="LoginText">Login</string>
+    <string name="ForgotPassword">Forgot Password?</string>
+    <string name="RegisterClue">Don\'t have an account?</string>
+    <string name="RegisterText">Register</string>
+    <string name="LoginClue">Already have an account?</string>
 </resources>
